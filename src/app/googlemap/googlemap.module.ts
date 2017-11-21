@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { GooglemapComponent } from './googlemap.component';
 import { AgmCoreModule } from '@agm/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { GooglemapRoutingModule } from 'googlemap/googlemap-routing.module';
+import { GooglemapRoutingModule } from '../googlemap/googlemap-routing.module';
 
 @NgModule({
   imports: [

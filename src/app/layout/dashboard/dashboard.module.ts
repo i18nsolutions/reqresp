@@ -14,7 +14,7 @@ import {
     ChatComponent
 } from './components';
 import { StatModule } from '../../shared';
-import { GooglemapComponent } from 'googlemap/googlemap.component';
+import { GooglemapComponent } from '../../googlemap/googlemap.component';
 
 
 @NgModule({
