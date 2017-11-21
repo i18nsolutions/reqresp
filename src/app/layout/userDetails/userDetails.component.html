@@ -1,0 +1,33 @@
+
+<div class="row">
+    <div class="col-lg-6">
+
+        <form role="form">
+
+                <div class="form-group">
+                        <label>Selects</label>
+                        <select class="form-control" name="need" [(ngModel)]="user.need"  >
+                            <option *ngFor="let hope of hopers" [value]=""hope>{{hope}}</option>
+                        </select>
+                    </div>
+
+
+            <fieldset class="form-group">
+                <label>Name</label>
+                <input class="form-control" name="name" [(ngModel)]="user.name">
+            </fieldset>
+            <fieldset class="form-group">
+                <label>phone</label>
+                <input class="form-control" name="phone" [(ngModel)]="user.phone">
+            </fieldset>
+            <fieldset class="form-group">
+                <label>email</label>
+                <input class="form-control" name="email" [(ngModel)]="user.email">
+            </fieldset>
+          
+        </form>
+    </div>
+</div>
+
+
+
