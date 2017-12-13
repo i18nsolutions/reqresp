@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './shared';
-import {} from '../+googlemap/googlemap.module'
 
 const routes: Routes = [
     {
@@ -11,7 +10,7 @@ const routes: Routes = [
     },
     { path: 'login', loadChildren: './login/login.module#LoginModule' },
     { path: 'signup', loadChildren: './signup/signup.module#SignupModule' },
-    {path: 'search-location', loadChildren: './googlemap/googlemap.module#GooglemapModule'},
+    { path: 'search-location', loadChildren: './googlemap/googlemap.module#GooglemapModule'},
     { path: 'not-found', loadChildren: './not-found/not-found.module#NotFoundModule' },
     { path: '**', redirectTo: 'not-found' }
 ];

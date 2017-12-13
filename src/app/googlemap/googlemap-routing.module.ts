@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { GooglemapComponent } from './googlemap.component';
 
 const routes: Routes = [
-    { path: '', component: GooglemapComponent }
+     { path: '', component: GooglemapComponent }
 ];
 
 @NgModule({

@@ -1,0 +1,68 @@
+<div class="contain">
+
+  <!-- <app-googlemap></app-googlemap> -->
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-lg-1"></div>
+<div class="col-lg-4">
+
+    <div class="form-group">
+      <label for="location">Select Service Category</label>
+      <select class="form-control" id="houseService" name="selectServiceType" [(ngModel)]="serviceCategoryDetails.serviceType" required>
+        <option value="" *ngFor="let i of serviceRequestDetailList" [value]="i.serviceType">{{i.serviceType}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="form-group">
+      <label for="location">Select Location </label>
+      <select class="form-control" id="houseService" required name="selectLocation" [(ngModel)]="serviceCategoryDetails.location">
+        <option value="" *ngFor="let i of serviceRequestDetailList" [value]="i.location   ">{{i.location}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-lg-2">  
+    <div class="form-group">     
+        <label for="submit"></label>    
+    <button class="btn form-control btn-secondary" type="submit" (click)="onSubmit()">Submit Button</button>
+    </div>  
+</div>
+
+
+</div>
+
+<div class="container m-t-1">
+
+
+<div class="jumbotron">
+
+<div class="row">
+    <div class="col-sm-4" *ngFor="let i of hopers">
+        <div class="card  card-block text-white bg-primary mb-3">
+            <div class="card-header  bg-primary"><h5> {{i.job}} </h5></div>
+            <div class="card-body">
+                <h4 class="card-title">  {{i.name}}</h4>
+                <p class="card-text">   Available:{{i.available}}</p>
+                <p class="card-text"> Rating: {{i.rating}}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="col-sm-4" *ngFor="let i of hopers">
+        <div class="card text-white bg-danger mb-3">
+            <div class="card-header bg-danger">{{i.name}}</div>
+            <div class="card-body">
+                <h4 class="card-title">Danger card title</h4>
+                <p class="card-text">{{i.discription}}.</p>
+            </div>
+        </div>
+    </div> -->
+
+</div>
+</div>
