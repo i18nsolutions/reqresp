@@ -16,11 +16,14 @@ export class GooglemapComponent {
   @ViewChild('search')
   public searchElementRef: ElementRef;
 
-  constructor(
-    private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone, 
-  
-  ) { }
+  constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone) {
+    console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+    console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    
+    console.log("Loading Map ");
+    console.log("###################################################################");
+    
+   }
 
 
   ngOnInit() {

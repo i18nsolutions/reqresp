@@ -3,14 +3,22 @@
 
 
         <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Dashboard' | translate }}
+            <i class="fa fa-fw fa-home"></i>&nbsp;{{ 'HOME' | translate }}
         </a>
         <a [routerLink]="['/user-details-page']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-file-o"></i>&nbsp;{{ 'user Details' | translate }}
+            <i class="fa fa-file-o"></i>&nbsp;{{ 'Hoper Registration' | translate }}
         </a>
         
         <a [routerLink]="['/blank-page']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-file-o"></i>&nbsp;{{ 'Blank Page' | translate }}
+        </a>
+
+        <!-- <a [routerLink]="['/house-service-finder']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-file-o"></i>&nbsp;{{ 'House Service' | translate }}
+        </a> 
+        
+        <a [routerLink]="['/search-location']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-file-o"></i>&nbsp;{{ 'Map Service' | translate }}
         </a>
         
         <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
@@ -30,8 +38,10 @@
         </a>
         <a [routerLink]="['/components']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-th-list"></i>&nbsp;{{ 'EDUCATION' | translate }}
-        </a>
-        <div class="nested-menu">
+        </a>  -->
+
+
+        <!-- <div class="nested-menu">
             <a class="list-group-item" (click)="addExpandClass('WOODWORK_pages')">
                 <span>
                     <i class="fa fa-plus"></i>&nbsp; {{ 'WOOD WORKS' | translate }}</span>
@@ -55,9 +65,9 @@
                     </li>
                 </ul>
             </li>
-        </div>
+        </div> -->
 
-        <div class="nested-menu">
+        <!-- <div class="nested-menu">
             <a class="list-group-item" (click)="addExpandClass('WOODWORK_pages')">
                 <span>
                     <i class="fa fa-plus"></i>&nbsp; {{ 'TRAVELLS' | translate }}</span>
@@ -81,9 +91,9 @@
                     </li>
                 </ul>
             </li>
-        </div>
+        </div> -->
 
-        <div class="nested-menu">
+        <!-- <div class="nested-menu">
             <a class="list-group-item" (click)="addExpandClass('EDUCATION_pages')">
                 <span>
                     <i class="fa fa-plus"></i>&nbsp; {{ 'HEALTH' | translate }}</span>
@@ -107,7 +117,7 @@
                     </li>
                 </ul>
             </li>
-        </div>
+        </div> -->
 
        
 

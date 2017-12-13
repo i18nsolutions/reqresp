@@ -1,8 +1,35 @@
+<H3>Hopers registration Form </H3>
+<div class="row container-hoper-registration">
 
-<div class="row">
-    <div class="col-lg-6">
+    <div class="form-group">
+            <label>Selects</label>
+            <select class="form-control" name="need" [(ngModel)]="user.need"  >
+                <option *ngFor="let hope of hopers" [value]=""hope>{{hope}}</option>
+            </select>
+    </div>
+    <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" name="name" [(ngModel)]="user.name">
+        
+    </div>
+    <div class="form-group">
+            <label>phone</label>
+            <input class="form-control" name="phone" [(ngModel)]="user.phone">
+        
+    </div>
+    <div class="form-group">
+            <label>email</label>
+            <input class="form-control" name="email" [(ngModel)]="user.email">
+       
+    </div>
+</div>
+<h3>
+        need Domain for Hopers....
+</h3>
 
-        <form role="form">
+
+
+<!-- <form role="form">
 
                 <div class="form-group">
                         <label>Selects</label>
@@ -25,9 +52,4 @@
                 <input class="form-control" name="email" [(ngModel)]="user.email">
             </fieldset>
           
-        </form>
-    </div>
-</div>
-
-
-
+        </form> -->

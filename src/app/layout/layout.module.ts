@@ -6,13 +6,19 @@ import { TranslateModule } from '@ngx-translate/core';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 import { HeaderComponent, SidebarComponent } from '../shared';
+import { GooglemapModule } from 'app/googlemap/googlemap.module';
+import { HouseModule } from 'app/House/House.module';
+import { DashboardModule } from 'app/layout/dashboard/dashboard.module';
 
 @NgModule({
     imports: [
         CommonModule,
         NgbDropdownModule.forRoot(),
         LayoutRoutingModule,
-        TranslateModule
+        TranslateModule,
+        GooglemapModule,
+        HouseModule,
+        DashboardModule
     ],
     declarations: [
         LayoutComponent,

@@ -15,6 +15,9 @@ import {
 } from './components';
 import { StatModule } from '../../shared';
 import { GooglemapComponent } from '../../googlemap/googlemap.component';
+import { HouseComponent } from 'app/House/House.component';
+import { HouseModule } from 'app/House/House.module';
+import { FormsModule }   from '@angular/forms';
 
 
 @NgModule({
@@ -24,13 +27,14 @@ import { GooglemapComponent } from '../../googlemap/googlemap.component';
         NgbAlertModule.forRoot(),
         DashboardRoutingModule,
         StatModule,
+        FormsModule
     ],
     declarations: [
         DashboardComponent,
         TimelineComponent,
         NotificationComponent,
         ChatComponent,
-        
+        HouseComponent
     ]
 })
 export class DashboardModule { }
