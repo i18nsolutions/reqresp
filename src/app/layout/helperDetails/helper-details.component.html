@@ -1,30 +1,64 @@
-<H3>Hopers registration Form </H3>
-<div class="row container-hoper-registration">
+<H3>
+    Hopers registration Form </H3>
 
-    <div class="form-group">
-            <label>Selects</label>
-            <select class="form-control" name="need" [(ngModel)]="user.need"  >
-                <option *ngFor="let hope of hopers" [value]=""hope>{{hope}}</option>
-            </select>
-    </div>
-    <div class="form-group">
+<div class="row container-hoper-registration">
+    <div class="row container-hoper-registration-1">
+        <div class="form-group">
             <label>Name</label>
             <input class="form-control" name="name" [(ngModel)]="user.name">
-        
-    </div>
-    <div class="form-group">
+
+        </div>
+        <div class="form-group">
             <label>phone</label>
             <input class="form-control" name="phone" [(ngModel)]="user.phone">
-        
-    </div>
-    <div class="form-group">
+
+        </div>
+        <div class="form-group">
             <label>email</label>
             <input class="form-control" name="email" [(ngModel)]="user.email">
-       
+        </div>
+        <div class="form-group">
+            <label>AAdhar Number</label>
+            <input class="form-control" name="email" [(ngModel)]="user.email">
+        </div>
+        <div class="form-group">
+            <label>Select Your proffession</label>
+            <select class="form-control" name="need" [(ngModel)]="user.need">
+                <option *ngFor="let hope of hopers" [value]="" hope>{{hope}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row container-hoper-registration-1">
+
+        <div class="row container-hoper-registration-address">
+            <div class="form-group">
+                <label>Addres Line 1</label>
+                <input class="form-control" name="Addres Line 1">
+
+            </div>
+            <div class="form-group">
+                <label>Addres Line 2</label>
+                <input class="form-control" name="Addres Line 2">
+
+            </div>
+            <div class="form-group">
+                <label>Street</label>
+                <input class="form-control" name="Street">
+            </div>
+            <div class="form-group">
+                <label>Taluk</label>
+                <input class="form-control" name="taluk">
+            </div>
+            <div class="form-group">
+                <label>Pincode</label>
+                <input class="form-control" name="taluk">
+            </div>
+        </div>
+
     </div>
 </div>
 <h3>
-        need Domain for Hopers....
+    need Domain for Hopers....
 </h3>
 
 
