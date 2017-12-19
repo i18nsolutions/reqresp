@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
-import { UserDetailsComponent } from './userDetails.component';
-import { UserDetailsRoutingModule } from 'app/layout/userDetails/userDetails-routing.module';
+import { UserDetailsComponent } from './helper-details.component';
+import { UserDetailsRoutingModule } from './helper-details.routing.module';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -14,4 +14,4 @@ import { FormsModule } from '@angular/forms';
   ],
   declarations: [UserDetailsComponent]
 })
-export class UserDetailsModule { }
+export class HelperDetailsModule { }

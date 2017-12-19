@@ -17,8 +17,8 @@ export class Address{
 
 @Component({
   selector: 'app-userDetails',
-  templateUrl: './userDetails.component.html',
-  styleUrls: ['./userDetails.component.scss']
+  templateUrl: './helper-details.component.html',
+  styleUrls: ['./helper-details.component.scss']
 })
 export class UserDetailsComponent implements OnInit {
  public user: UserDetails;
