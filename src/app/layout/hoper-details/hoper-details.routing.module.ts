@@ -1,10 +1,10 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { UserDetailsComponent } from 'app/layout/helperDetails/helper-details.component';
+import { HoperDetailsComponent } from './hoper-details.component';
 
 const routes: Routes = [
   { 
-    path: '', component: UserDetailsComponent,
+    path: '', component: HoperDetailsComponent,
    
    },
 ];
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class UserDetailsRoutingModule { }
+export class HoperDetailsRoutingModule { }
