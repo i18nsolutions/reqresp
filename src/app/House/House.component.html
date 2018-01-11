@@ -12,8 +12,8 @@
 
     <div class="form-group">
       <label for="location">Select Service Category</label>
-      <select class="form-control" id="houseService" name="selectServiceType" [(ngModel)]="serviceCategoryDetails.serviceType" required>
-        <option value="" *ngFor="let i of serviceRequestDetailList" [value]="i.serviceType">{{i.serviceType}}</option>
+      <select class="form-control" id="houseService" name="selectServiceType" [(ngModel)]="availableServices.serviceType" required>
+        <option value="" *ngFor="let i of availableServicesList" [value]="i.serviceType">{{i.serviceType}}</option>
       </select>
     </div>
   </div>
@@ -21,8 +21,8 @@
   <div class="col-lg-4">
     <div class="form-group">
       <label for="location">Select Location </label>
-      <select class="form-control" id="houseService" required name="selectLocation" [(ngModel)]="serviceCategoryDetails.location">
-        <option value="" *ngFor="let i of serviceRequestDetailList" [value]="i.location   ">{{i.location}}</option>
+      <select class="form-control" id="houseService" required name="selectLocation" [(ngModel)]="availableServices.location">
+        <option value="" *ngFor="let i of availableLocationList" [value]="i   ">{{i}}</option>
       </select>
     </div>
   </div>

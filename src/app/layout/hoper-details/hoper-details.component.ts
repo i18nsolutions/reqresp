@@ -10,15 +10,25 @@ import {HoperDomain} from './hoper.domain';
 })
 export class HoperDetailsComponent implements OnInit {
  public hoper: HoperDomain;
-  constructor() { }
-  hopers = ["plumbing","electrical","",34]
+ private availableLocationList: string[];
+  constructor() { 
+     this.hoper = new HoperDomain();
+     this.availableLocationList = ['Attur','Ammapet','Ayodhiyapattinam','Fairlands',
+      'Govindampalayam','Gugai','Hasthampatti','Jagir Ammapalayam','Kitchipalayam'];
+    }
+
+  // hopers = ["plumbing","electrical","",34]
   ngOnInit() {
-    this.hoper = new HoperDomain();
+   
   }
   getUsetDetails(){
     console.log(this.hoper);
     // console.log(this.user);
    
+  }
+
+  onSubmit(){
+    console.log(this.hoper);
     
   }
 }

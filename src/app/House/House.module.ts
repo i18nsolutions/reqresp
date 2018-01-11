@@ -11,8 +11,7 @@ import { HopersListComponent } from './hopersList/hopersList.component';
     HouseRoutingModule,
     FormsModule,
     GooglemapModule
-
-    ],
+  ],
   declarations: [
     // HouseComponent,
     HopersListComponent

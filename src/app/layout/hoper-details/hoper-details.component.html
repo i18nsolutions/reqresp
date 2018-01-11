@@ -1,64 +1,127 @@
 <div class="row">
     <div class="col-xl-12 text-xs-center">
-            <div class="card mb-3">
-       
-                <div class="card-header">
+        <div class="card mb-1">
+
+            <div class="card-header">
                 <i class="fa fa-user-circle-o fa-fw"></i> Hopers registration Form
             </div>
         </div>
     </div>
 
-    <div class=" card-block col-lg-6">
-        <div class="form-group ">
-            <label>Name</label>
-            <input class="form-control col-lg-8" name="name" [(ngModel)]="user.name">
+    <div class="card card-block col-lg-6 mb-4">
+        <form novalidate>
+
+            <fieldset>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>Proffesion</label>
+                            <select class="form-control">
+                                <option>Auto Driver</option>
+                                <option>Beautician</option>
+                                <option>Car Driver</option>
+                                <option>Doctor</option>
+                                <option>Electrician</option>
+                                <option>Food Service</option>
+                                <option>Gym</option>
+                                <option>Health care</option>
+                                <option>Illuslator</option>
+                                <option>Joker</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="location">Select Location </label>
+                            <select class="form-control" id="houseService" required name="selectLocation">
+                                <option value="" *ngFor="let i of availableLocationList" [value]="i   ">{{i}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text"   class="form-control">
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text"   class="form-control">   </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="hoperRegGenderMale" value="male"> Male
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios" id="hoperRegGenderFemale" value="female"> Female
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control col-lg-12">
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control col-lg-12">
+                    </div>
+                </div>
+
+   
+
+    </fieldset>
+
+
+    </form>
+</div>
+
+<div class=" card card-block col-lg-6  mb-4">
+    <div>
+        <div class="form-group">
+            <label>Addres Line 1</label>
+            <input class="form-control col-lg-10" name="Addres Line 1">
+
         </div>
         <div class="form-group">
-            <label>phone</label>
-            <input class="form-control col-lg-8" name="phone" [(ngModel)]="user.phone">
+            <label>Addres Line 2</label>
+            <input class="form-control col-lg-10" name="Addres Line 2">
+
         </div>
         <div class="form-group">
-            <label>email</label>
-            <input class="form-control col-lg-8" name="email" [(ngModel)]="user.email">
+            <label>Street</label>
+            <input class="form-control col-lg-10" name="Street">
         </div>
         <div class="form-group">
-            <label>AAdhar Number</label>
-            <input class="form-control col-lg-8" name="email" [(ngModel)]="user.email">
+            <label>Taluk</label>
+            <input class="form-control col-lg-10" name="taluk">
         </div>
         <div class="form-group">
-            <label>Select Your proffession</label>
-            <select class="form-control col-lg-10" name="need" [(ngModel)]="user.need">
-                <option *ngFor="let hope of hopers" [value]="" hope>{{hope}}</option>
-            </select>
+            <label>Pincode</label>
+            <input class="form-control col-lg-10" name="taluk">
         </div>
+
+        <div class="col-xl-6">
+            <p>
+                <button type="reset" class="btn btn-danger">Reset</button>
+                <button type="submit" class="btn btn-success" (click)="onSubmit()"> Register </button>
+            </p>
+        </div>
+
+
     </div>
+</div>
 
-    <div class=" card-block col-lg-6">
-        <div>
-            <div class="form-group">
-                <label>Addres Line 1</label>
-                <input class="form-control col-lg-10" name="Addres Line 1">
 
-            </div>
-            <div class="form-group">
-                <label>Addres Line 2</label>
-                <input class="form-control col-lg-10" name="Addres Line 2">
+<div class="col-xl-8"></div>
 
-            </div>
-            <div class="form-group">
-                <label>Street</label>
-                <input class="form-control col-lg-10" name="Street">
-            </div>
-            <div class="form-group">
-                <label>Taluk</label>
-                <input class="form-control col-lg-10" name="taluk">
-            </div>
-            <div class="form-group">
-                <label>Pincode</label>
-                <input class="form-control col-lg-10" name="taluk">
-            </div>
-        </div>
-    </div>
 
 </div>
 
@@ -67,7 +130,7 @@
 
                 <div class="form-group">
                         <label>Selects</label>
-                        <select class="form-control" name="need" [(ngModel)]="user.need"  >
+                        <select class="form-control" name="need" [(ngModel)]="hoper.need"  >
                             <option *ngFor="let hope of hopers" [value]=""hope>{{hope}}</option>
                         </select>
                     </div>
@@ -75,15 +138,15 @@
 
             <fieldset class="form-group">
                 <label>Name</label>
-                <input class="form-control" name="name" [(ngModel)]="user.name">
+                <input class="form-control" name="name" [(ngModel)]="hoper.name">
             </fieldset>
             <fieldset class="form-group">
                 <label>phone</label>
-                <input class="form-control" name="phone" [(ngModel)]="user.phone">
+                <input class="form-control" name="phone" [(ngModel)]="hoper.phone">
             </fieldset>
             <fieldset class="form-group">
                 <label>email</label>
-                <input class="form-control" name="email" [(ngModel)]="user.email">
+                <input class="form-control" name="email" [(ngModel)]="hoper.email">
             </fieldset>
           
         </form> -->

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ServiceCategoryDetails} from './service-request-details';
+import { AvailableServices } from './service-request-details';
 import { HouseService } from 'app/House/house.service';
 
 
@@ -10,52 +10,63 @@ import { HouseService } from 'app/House/house.service';
   selector: 'app-House',
   templateUrl: './House.component.html',
   styleUrls: ['./House.component.scss'],
-  providers : [HouseService]
+  providers: [HouseService]
 })
 export class HouseComponent implements OnInit {
 
-private serviceCategoryDetails : ServiceCategoryDetails;
+  private availableServices: AvailableServices;
 
-serviceRequestDetailList : ServiceCategoryDetails[] = [
-  {serviceType:'Plumbing', location:'salem'},
-  {serviceType:'Nursing', location:'salem'},
-  {serviceType:'Maid', location:'salem'},
-  {serviceType:'Electical', location:'salem'}  
-];
+  availableServicesList: AvailableServices[] = [
+    { serviceType: 'Plumbing' },
+    { serviceType: 'Nursing' },
+    { serviceType: 'Maid' },
+    { serviceType: 'Electicalds' }
+  ];
+  private availableLocationList : string[];
 
-  hopers: Object[];
+  hopers: Object[];
 
-  constructor(private houseService: HouseService ) {
-    this.serviceCategoryDetails = new ServiceCategoryDetails();
-   }
+  constructor(private houseService: HouseService) {
+    this.availableServices = new AvailableServices();
+    this.availableLocationList = ['Attur','Ammapet','Ayodhiyapattinam','Fairlands',
+      'Govindampalayam','Gugai','Hasthampatti','Jagir Ammapalayam','Kitchipalayam'];
+  }
 
   ngOnInit() {
+
+    // TODO yet to delete thees records and fetch from the  backend service
     this.hopers = [
-      {name:"Rinold", job:'plumbing',rating:'5', available:'yes'},
-      {name:"Manoj", job:'Beautician',rating:'4', available:'yes'},
-      {name:"Aiemen", job:'Electrical',rating:'5', available:'yes'},
-      {name:"Sneha", job:'Nursing',rating:'5', available:'yes'},
+      { name: "Rinold", job: 'plumbing', rating: '5', available: 'yes', Location: 'Attur' },
+      { name: "Manoj", job: 'Beautician', rating: '4', available: 'yes', Location: 'Ammapet' },
+      { name: "Aiemen", job: 'Electrical', rating: '5', available: 'yes', Location: 'Ayodhiyapattinam' },
+      { name: "Sneha", job: 'Nursing', rating: '5', available: 'yes', Location: 'Fairlands' },
     ]
   }
 
-  onSubmit(){
-    console.log(this.serviceCategoryDetails);
-    this.houseService.get(this.serviceCategoryDetails);
+  onSubmit() {
+    console.log(this.availableServices);
+    this.houseService.get(this.availableServices);
   }
 
 }
 
- 
 
-export class Hopers{
-  
-    name:String;
-    discription:String;
-    id:number;
-    constructor(name:String ,discr:String,id:number){
-      this.name = name;
-      this.discription = discr;
-      this.id = id;
-    }
+
+export class Hopers {
+
+  private name: String;
+  private discription: String;
+  private id: number;
+  private availableLocationList: string[];
+
+  constructor(name: String, discr: String, id: number) {
+    this.name = name;
+    this.discription = discr;
+    this.id = id;
+   
+
   }
+}
+
+
 

@@ -1,6 +1,6 @@
-export class ServiceCategoryDetails {
+export class AvailableServices {
     public serviceType:string;
-    public location:string;
+   
 }
 
 
