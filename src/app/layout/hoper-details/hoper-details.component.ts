@@ -29,6 +29,5 @@ export class HoperDetailsComponent implements OnInit {
 
   onSubmit(){
     console.log(this.hoper);
-    
   }
 }
